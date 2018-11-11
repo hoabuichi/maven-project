@@ -7,8 +7,9 @@ pipeline {
     } 
  
     triggers {
-         pollSCM('* * * * *') // Polling Source Control
-     }stages{
+      pollSCM('* * * * *') // Polling Source Control
+    }
+    stages{
         stage('Build'){
             steps {
                 bat 'mvn clean package'
